@@ -27,10 +27,21 @@
 
 namespace dynamixel {
     enum class OperatingMode {
+        // names from original libdynamixel
         torque,
         wheel,
         joint,
         multi_turn,
+        torque_multi,
+        direct,
+        // alias from ROBOTIS e-Manual
+        current = torque,
+        velocity = wheel,
+        position = joint,
+        extended_position = multi_turn,
+        current_based_position = torque_multi,
+        pwm = direct,
+        //
         unknown
     };
     namespace servos {

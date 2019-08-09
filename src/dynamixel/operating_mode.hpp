@@ -85,6 +85,10 @@ namespace dynamixel {
             return OperatingMode::joint;
         else if (4 == mode)
             return OperatingMode::multi_turn;
+        else if (5 == mode)
+            return OperatingMode::torque_multi;
+        else if (16 == mode)
+            return OperatingMode::direct;
         else
             return OperatingMode::unknown;
     }
@@ -119,6 +123,12 @@ namespace dynamixel {
             break;
         case OperatingMode::multi_turn:
             return "multi_turn";
+            break;
+        case OperatingMode::torque_multi:
+            return "torque_multi";
+            break;
+        case OperatingMode::direct:
+            return "direct";
             break;
         case OperatingMode::unknown:
         default:
