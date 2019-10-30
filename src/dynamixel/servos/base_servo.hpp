@@ -174,6 +174,20 @@ namespace dynamixel {
             BASE_FIELD(speed_trajectory);
             BASE_FIELD(position_trajectory);
             // } Only MX with protocol 2
+            // Only XM ??
+            BASE_FIELD(protocol_type);
+            BASE_FIELD(present_input_voltage);
+            BASE_FIELD(velocity_trajectory);
+            BASE_FIELD(present_velocity);
+            BASE_FIELD(registered_instruction);
+            BASE_FIELD(model_information);
+            BASE_FIELD(profile_velocity);
+            BASE_FIELD(goal_velocity);
+            BASE_FIELD(velocity_limit);
+            BASE_FIELD(shutdown);
+            BASE_FIELD(min_voltage_limit);
+            BASE_FIELD(max_voltage_limit);
+            BASE_FIELD(temperature_limit);
 
             // Common functionality for the servos that will be implemented in the Servo class (where we know the model)
             virtual InstructionPacket<protocol_t> ping() const

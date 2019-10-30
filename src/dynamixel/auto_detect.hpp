@@ -65,6 +65,8 @@ namespace dynamixel {
             return std::make_shared<servos::Mx64P2>(id);
         case servos::Mx106P2::ct_t::model_number_value:
             return std::make_shared<servos::Mx106P2>(id);
+        case servos::Xm540W270::ct_t::model_number_value:
+            return std::make_shared<servos::Xm540W270>(id);
         default:
             throw errors::Error("Unrecognized model number");
         }
