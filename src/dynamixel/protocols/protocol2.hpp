@@ -214,7 +214,8 @@ namespace dynamixel {
 
                 uint8_t error = packet[8];
 
-                if (error != 0) {
+                // the packet is still valid if an error is reported
+                if (error != 0 && throw_exceptions) {
                     std::stringstream err_message;
                     err_message << "Actuator with ID " << ((int32_t)id)
                                 << " reported the following error: ";
